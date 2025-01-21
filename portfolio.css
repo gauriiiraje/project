@@ -1,0 +1,41 @@
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+p {
+    text-align: center;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 20px;
+    transition: grid-template-columns 1s ease, gap 1s ease;
+}
+
+.image-box img {
+    width: 400px; /* Fixed width for each image */
+    height: 500px; /* Fixed height for each image */
+    object-fit: cover;
+}
+
+.image-box span {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Animation to transform to row layout */
+.row-layout {
+    grid-template-columns: repeat(4, 1fr); /* Change to single row */
+    gap: 10px; /* Reduce gap between images */
+    transition: all 2s ease-in-out; /* Smooth transition for row layout */
+}
